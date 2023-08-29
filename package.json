@@ -1,0 +1,36 @@
+{
+  "name": "antd-mobile-table",
+  "version": "1.0.0",
+  "description": "Responsive antd Table Component",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./lib && tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pakoc/AntdMobileTable.git"
+  },
+  "keywords": [
+    "antd",
+    "table",
+    "mobile",
+    "responsive",
+    "react"
+  ],
+  "author": "pakoc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pakoc/AntdMobileTable/issues"
+  },
+  "homepage": "https://github.com/pakoc/AntdMobileTable#readme",
+  "dependencies": {
+    "antd": "^5.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7"
+  }
+}
