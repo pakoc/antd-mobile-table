@@ -2,14 +2,14 @@
   "name": "antd-mobile-table",
   "version": "1.0.0",
   "description": "Responsive antd Table Component",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "rm -rf ./lib && tsc",
     "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pakoc/AntdMobileTable.git"
+    "url": "git+https://github.com/pakoc/antd-mobile-table"
   },
   "keywords": [
     "antd",
