@@ -3,3 +3,4 @@ node_modules/
 src/
 .eslintrc.js
 .vscode/
+demo.gif

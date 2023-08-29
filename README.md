@@ -60,3 +60,10 @@ export default function App() {
 }
 ```
 
+# Demo
+
+![Alt text](demo.gif?raw=true "Title")
+
+# Live demo
+
+https://stackblitz.com/edit/stackblitz-starters-efgdjy?file=src%2FApp.tsx 
