@@ -1,6 +1,6 @@
 {
   "name": "antd-mobile-table",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Responsive antd Table Component",
   "main": "lib/index.js",
   "scripts": {
@@ -24,8 +24,7 @@
     "url": "https://github.com/pakoc/antd-mobile-table/issues"
   },
   "homepage": "https://github.com/pakoc/antd-mobile-table#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
