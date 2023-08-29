@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/pakoc/antd-mobile-table#readme",
   "dependencies": {
-    "antd": "^5.8.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7"
+    "@types/react-dom": "^18.2.7",
+    "antd": "^5.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
