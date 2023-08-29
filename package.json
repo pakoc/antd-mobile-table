@@ -21,9 +21,9 @@
   "author": "pakoc",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pakoc/AntdMobileTable/issues"
+    "url": "https://github.com/pakoc/antd-mobile-table/issues"
   },
-  "homepage": "https://github.com/pakoc/AntdMobileTable#readme",
+  "homepage": "https://github.com/pakoc/antd-mobile-table#readme",
   "dependencies": {
     "antd": "^5.8.5",
     "react": "^18.2.0",
