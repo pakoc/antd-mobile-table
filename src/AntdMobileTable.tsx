@@ -1,44 +1,10 @@
-import { useEffect, useState } from 'react';
-
 import { Card, Table, TableProps } from 'antd';
+import { useIsMobile } from './hooks';
 
 interface ResponsiveTableProps<RecordType extends object = any>
 	extends TableProps<RecordType> {
 	mobileBreakPoint?: number;
 }
-
-/**
- * current state hook
- * @param mobileBreakPoint
- * @returns
- */
-const useIsMobile = (mobileBreakPoint?: number) => {
-	const [isMobile, setIsMobile] = useState(false);
-
-	useEffect(() => {
-		if (!mobileBreakPoint) {
-			return;
-		}
-
-		let state = false;
-
-		const handleResize = () => {
-			if (window.innerWidth <= mobileBreakPoint != state) {
-				state = window.innerWidth <= mobileBreakPoint;
-				setIsMobile(state);
-			}
-		};
-
-		window.addEventListener('resize', handleResize);
-		handleResize();
-
-		() => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, []);
-
-	return isMobile;
-};
 
 const cssPrefix = 'antd-mobile-table';
 
@@ -53,7 +19,7 @@ export const AntdMobileTable = (props: ResponsiveTableProps) => {
 
 	return (
 		<div
-			className="antd-mobile-table"
+			className={`${cssPrefix} ${props.className ?? ''}`}
 			style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
 		>
 			{tableProps.dataSource?.map(row => (
