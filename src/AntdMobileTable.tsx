@@ -1,4 +1,4 @@
-import { Card, Table, TableProps } from 'antd';
+import { Card, Pagination, Table, TableProps } from 'antd';
 import { useIsMobile } from './hooks';
 
 interface ResponsiveTableProps<RecordType extends object = any>
@@ -49,6 +49,10 @@ export const AntdMobileTable = (props: ResponsiveTableProps) => {
 					})}
 				</Card>
 			))}
+
+			{props.pagination ? (
+              <Pagination {...props.pagination} />
+            ) : null}
 		</div>
 	);
 };
