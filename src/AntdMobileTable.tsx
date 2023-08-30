@@ -1,4 +1,5 @@
 import { Card, Pagination, Table, TableProps } from 'antd';
+
 import { useIsMobile } from './hooks';
 
 interface ResponsiveTableProps<RecordType extends object = any>
@@ -10,6 +11,8 @@ const cssPrefix = 'antd-mobile-table';
 
 export const AntdMobileTable = (props: ResponsiveTableProps) => {
 	const { mobileBreakPoint, ...tableProps } = props;
+
+	const { rowKey = 'key' } = tableProps;
 
 	const isMobile = useIsMobile(mobileBreakPoint);
 
@@ -23,12 +26,12 @@ export const AntdMobileTable = (props: ResponsiveTableProps) => {
 			style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
 		>
 			{tableProps.dataSource?.map(row => (
-				<Card className={`${cssPrefix}-card`} key={row.key}>
+				<Card className={`${cssPrefix}-card`} key={row[rowKey as string]}>
 					{tableProps.columns?.map((col, index) => {
 						return (
 							<div
 								className={`${cssPrefix}-row`}
-								key={`${col.key} ${row.key}`}
+								key={`${col.key} ${row[rowKey as string]}`}
 								style={{ display: 'flex' }}
 							>
 								<div className={`${cssPrefix}-title`} style={{ width: '50%' }}>
@@ -50,9 +53,7 @@ export const AntdMobileTable = (props: ResponsiveTableProps) => {
 				</Card>
 			))}
 
-			{props.pagination ? (
-              <Pagination {...props.pagination} />
-            ) : null}
+			{props.pagination ? <Pagination {...props.pagination} /> : null}
 		</div>
 	);
 };
