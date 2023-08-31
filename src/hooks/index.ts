@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 /**
  * current state hook
@@ -16,8 +16,10 @@ export const useIsMobile = (mobileBreakPoint?: number) => {
 		let state = false;
 
 		const handleResize = () => {
-			if (window.innerWidth <= mobileBreakPoint != state) {
-				state = window.innerWidth <= mobileBreakPoint;
+			const clientWidth = window.document.documentElement.clientWidth;
+
+			if (clientWidth <= mobileBreakPoint != state) {
+				state = clientWidth <= mobileBreakPoint;
 				setIsMobile(state);
 			}
 		};
