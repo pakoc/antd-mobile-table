@@ -1,1 +1,1 @@
-export * from './AntdMobileTable'
+export * from './AntdMobileTable';
