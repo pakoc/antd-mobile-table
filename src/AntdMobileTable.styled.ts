@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 interface WrapperProps {
 	readonly $isMobile: boolean;
+	readonly $isEmpty: boolean;
 }
 
 export const Wrapper = styled.div<WrapperProps>`
@@ -13,9 +14,11 @@ export const Wrapper = styled.div<WrapperProps>`
 			if (props.$isMobile)
 				return css`
 					.ant-table {
-						&-thead,
-						&-tbody:not(:has(.ant-empty)) {
+						&-thead {
 							display: none;
+						}
+						&-tbody {
+							display: ${props.$isEmpty ? 'table-footer-group' : 'none'};
 						}
 					}
 				`;

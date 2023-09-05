@@ -17,12 +17,15 @@ export const AntdMobileTable = (props: ResponsiveTableProps) => {
 
 	const isMobile = useIsMobile(mobileBreakPoint);
 
+	const isEmpty = props.dataSource?.length == 0;
+
 	return (
 		<Wrapper
 			className={`${cssPrefix} ${props.className ?? ''} ${
 				isMobile ? cssPrefix + '-mobile' : cssPrefix + '-desktop'
 			}`}
 			$isMobile={isMobile}
+			$isEmpty={isEmpty}
 		>
 			<div className={`${cssPrefix}-cards`}>
 				{tableProps.dataSource?.map(row => (
